@@ -72,6 +72,7 @@ external ID.
 Now go to your Zen Cart admin, and in Tools->Install SQL Patches, run the .sql file in zen_customers.  Then upload the files in the admin folder to your admin directory. 
 
 <h3>Running the Import</h3>
+
 - From your Zen Cart admin, click Tools->Salesforce Export Customers.
 - From Salesforce, go to Setup, then to Data->Data Import Wizard.
 - Choose Accounts and Contacts, then Add New and Update Existing.
@@ -106,6 +107,7 @@ external ID.
 Now go to your Zen Cart admin, and in Tools->Install SQL Patches, run the .sql file in zen_products.  Then upload the files in the admin folder to your admin directory. 
 
 <h3>Running the Import</h3>
+
 - From your Zen Cart admin, click Tools->Salesforce Export Products.
 - From dataloader.io, click New Task, then Import, and select the Product Object,
 then click Next.
@@ -113,7 +115,8 @@ then click Next.
 existing records will be updated, so there's no duplication.
 - Since you don't have the Salesforce ID for your product records,
 you want to match on the Store Product ID.
-- You can see images of the dataloader.io screens and settings on the [Zen Cart Products to Salesforce](https://www.thatsoftwareguy.com/zencart_to_salesforce_products.html) page.
+- You can see images of the dataloader.io screens and settings on the 
+[Zen Cart Products to Salesforce](https://www.thatsoftwareguy.com/zencart_to_salesforce_products.html) page.
 
 Prices Import
 ---------------
@@ -150,6 +153,7 @@ But you wouldn't want to do this for hundreds of products. So use my procedure t
 Go to your Zen Cart admin, and in Tools->Install SQL Patches, run the .sql file in zen_prices.  Then upload the files in the admin folder to your admin directory. 
 
 <h3>Running the Import</h3>
+
 - From your Zen Cart admin, click Tools->Salesforce Export Prices.
 
 - From dataloader.io, click New Task, then Import, and select the Price Book Entry Object,
