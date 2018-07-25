@@ -20,7 +20,7 @@ Here is the mapping I used. The address record selected had its address\_book\_i
   
 |Salesforce|Zen Cart|
 |--- |--- |
-|Zen Cart Customer ID (custom field)|c.customers_id|
+|Legacy ID (custom field)|c.customers_id|
 |First Name|c.customers_firstname|
 |Last Name|c.customers_lastname|
 |Email|c.email_address|
@@ -64,7 +64,7 @@ Criteria for inclusion in a subsequent export are as follows:
 Prior to doing the import, you will need to create the custom fields shown in the table above.  In Salesforce, use these steps: 
 - Click Gear, then choose Setup
 - Object Manager-Contact-Fields and Relationships->New->
-the value is a Number whose name is Zen Cart Customer ID. Check box that says it's an
+the value is a Number whose name is Legacy ID. Check box that says it's an
 external ID.
 - Same thing for Company.  Length is 64.
 - You may also optionally add Company to the Account object.
@@ -76,7 +76,7 @@ Now go to your Zen Cart admin, and in Tools->Install SQL Patches, run the .sql f
 - From your Zen Cart admin, click Tools->Salesforce Export Customers.
 - From Salesforce, go to Setup, then to Data->Data Import Wizard.
 - Choose Accounts and Contacts, then Add New and Update Existing.
-- Match contact by Email, Account by Name & Site, then check update existing account information.
+- Match contact by Email, Account by Name & Site, then check Update existing Account information.
 
 
 Products Import
