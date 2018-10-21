@@ -165,4 +165,6 @@ then click Next.
 
 - You can see images of the dataloader.io screens and settings on the [Zen Cart Prices to Salesforce](https://www.thatsoftwareguy.com/zencart_to_salesforce_prices.html) page.
 
-
+Re-running an Import
+--------------------
+If you need to re-run an import for some reason (say you are changing code to add data to the csv file), you will need to reset the last export record.  Just update the table `sfdc_config` in phpMyAdmin, and make the appropriate change. 
