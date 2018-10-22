@@ -168,3 +168,12 @@ then click Next.
 Re-running an Import
 --------------------
 If you need to re-run an import for some reason (say you are changing code to add data to the csv file), you will need to reset the last export record.  Just update the table `sfdc_config` in phpMyAdmin, and make the appropriate change. 
+
+Accounts with Multiple Payers
+----------------------------- 
+If some of your customers have multiple email addresses they use to order,
+you may wish to consolidate these using a single account for the customer.
+In this case, the mapping of email address to account won't work, and 
+you'll need something more sophisticated.  A solution to this problem is
+provided by my [Zen Cart 360 Sales Reporting](https://github.com/scottcwilson/zencart_360_sales_reporting) modification.
+
