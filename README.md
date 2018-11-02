@@ -177,3 +177,22 @@ In this case, the mapping of email address to account won't work, and
 you'll need something more sophisticated.  A solution to this problem is
 provided by my [Zen Cart 360 Sales Reporting](https://github.com/scottcwilson/zencart_360_sales_reporting) modification.
 
+Using Leads
+-----------
+If you use Salesforce Leads, and you convert leads after they buy, you will need to use 
+the features described in "Account with Multiple Payers" above (notably the
+Zen Cart "Salesforce Account Name" feature).   Set the Salesforce Account Name
+field in the Customers record to the Account name from Salesforce *prior to*
+importing the updated customers; otherwise the import process will 
+create an Account named as the email address of the customer, which will
+duplicate the Account which the Salesforce convert process created. 
+
+Example: 
+- You create a new Lead for Wiley Coyote, and set the company name
+to Acme, and the Email to Wiley.Coyote@acme.com.  
+- When you convert this Lead,
+Salesforce creates a Contact (Wiley.Coyote@acme.com) and an Account (Acme). 
+- When this customer buys something out of your Zen Cart, the Zen Cart to 
+Salesforce import process will match the Contact Wiley.Coyote@acme.com, but will still create a new Account with the default Account name(Wiley.Coyote@acme.com). 
+- To avoid this, set the "Salesforce Account Name" field in the Zen Cart customer record for Mr. Coyote prior to doing the Import.
+- If you forget to do this, update the "Salesforce Account Name" field in the Zen Cart customer record and rerun the import, then remove the Account "Wiley.Coyote@acme.com" (since it will no longer be needed). 
